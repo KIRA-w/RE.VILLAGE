@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>RE.VILLAGE</title>
+	<style type="text/css">
+		.village{
+		background-image: url(re.jpg);
+		width: 1880px;
+		height: 930px;
+		background-size: 100% 100%;
+		margin: 0px;
+
+		}
+		.task{
+			height: 300px;
+			width: 200px;
+			background-color: grey
+		}
+		.h1{
+			text-align: center;
+			font-family: arial
+		}
+		.p{
+			text-align: center;
+			font-family: arial
+		}
+		.flex{
+			display: flex
+		}
+		.green{
+			height: 75px;
+			position: absolute; 
+			margin-left: 1500px;
+			margin-top: 760px
+		}
+		.ammo{
+			height: 60px;
+			margin-top: 440px;
+			position: absolute;
+		}
+		.eyes{
+			height: 50px;
+			margin-left: 1000px;
+			margin-top: 300px;
+			position: absolute;
+		}
+		.sprey{
+			height: 100px;
+			position: absolute;
+			margin-top: 740px;
+			margin-left: 600px
+		}
+		.lion{
+			height: 100px;
+			margin-left: 200px;
+			margin-top: 200px
+		}
+		.body{
+			margin: 0px
+		}
+		
+	</style>
+</head>
+<body class="body">
+	<div class="village">
+		<div class="flex">
+			<div>
+				<div class="task">
+					<h1 class="h1">Найди</h1>
+					<p class="p ammo1">
+					1.Патроны для пистолета
+					</p>
+					<p class="p green1">
+					2.Красная трава
+					</p>
+					<p class="p eyes1">
+					3.Глаз
+					</p>
+					<p class="p sprey1">
+					4.Лечебный спрей
+					</p>
+					<p class="p lion1">
+					5.Лион Кенеди
+					</p>
+					
+						<h1 style="margin-left: 30px">ОЧКИ: <span class="score"></span></h1>
+						
+					
+				</div>
+				<div>
+					<img src="ammo.png" class="ammo">
+				</div>
+			</div>
+			<div class="">
+				<img src="green.jpg" class="green">
+				<img src="eyes.jpg" class="eyes">
+				<img src="sprey.png" class="sprey">
+				<img src="lion.jpg" class="lion">
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		let score = 0;
+	document.querySelector('.score').innerHTML = score
+	document.querySelector('.ammo').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score
+		document.querySelector('.ammo').style.display = 'none'
+		document.querySelector('.ammo1').style.textDecoration = 'line-through'
+		alert('Ты нашел патроны! Теперь ты можешь перезарядить пистолет')
+
+	}
+	document.querySelector('.green').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score
+		document.querySelector('.green').style.display = 'none'
+		document.querySelector('.green1').style.textDecoration = 'line-through'
+		alert('Ты нашел красную траву! Теперь ты можешь улучшить красную траву')
+	}
+	document.querySelector('.eyes').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score
+		document.querySelector('.eyes').style.display = 'none'
+		document.querySelector('.eyes1').style.textDecoration = 'line-through'
+		alert('Ты нашел глаз! Жутко')
+	}
+	document.querySelector('.sprey').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score
+		document.querySelector('.sprey').style.display = 'none'
+		document.querySelector('.sprey1').style.textDecoration = 'line-through'
+		alert('Ты нашел спрей! Он может полностью вылечить тебя в критической ситуации.')
+	}
+	document.querySelector('.lion').onclick = function(){
+		score = score + 1
+		document.querySelector('.score').innerHTML = score
+		document.querySelector('.lion').style.display = 'none'
+		document.querySelector('.lion1').style.textDecoration = 'line-through'
+		alert('Ты нашел Леона Скотта Кеннеди! Классный парень')
+	}
+	</script>
+</body>
+</html>
